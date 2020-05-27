@@ -1,0 +1,174 @@
+.btn, .form-control{
+    font-size: 0.8rem;
+}
+.navbar{
+    padding: 0rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.17);
+    z-index: 1;
+}
+.nav-link {
+    font-size: 16px;
+    margin: 0 30px;
+}
+.f-t{
+    padding-top: 5rem;
+}
+.carousel-inner img{
+    height: 200px;
+}
+.notice{
+    margin-top: 20px;
+}
+
+.article-ul li .article-text .article-img{
+    width: 100px!important;
+    height: 100px!important;
+}
+.article-ul li .article-text .article-img img{
+    height: 80px!important;
+}
+.article-ul li .article-text .article-content .article-date {font-size: 12px!important;}
+.article-ul li .article-text .article-content .article-date span{ display: block; margin-top: 3px}
+.article-ul li .article-text .article-content .article-date{ padding: 5px 0 !important; }
+.article-text-h{ height: 40px; overflow: hidden;}
+.article-ul li{ height: 155px!important;}
+.footer{padding: 1rem 0!important;}
+.classify-content .left-img {
+    display: flex;
+}
+.classify-content .left-img .left-img-t{
+    flex: 1;
+}
+.left-img-t{
+    width: 100%;
+    margin: 0 5px;
+}
+.left-img-t img{
+    width: 100%;
+}
+
+.video-ul li { width: 45%; }
+.video-ul li img{
+    width: 100%;
+    height: 100px;
+}
+.video-ul li .title{
+    font-size: 12px;
+    line-height: 18px!important;
+}
+.video-ul li .bottom{
+    height: 20px!important;
+}
+.video-ul li .bottom .el-button--text{
+    font-size: 12px;
+}
+.video-text-list h3{
+    font-size: 16px;
+    color: #333;
+    padding: 8px 10px;
+}
+.video-text-list ul li{
+    color: #666;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.video-plays{
+    background: #fff!important;
+}
+.video-left-ul { display: flex;}
+.video-left-ul li{
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+    line-height: 40px;
+    margin:  0 10px;
+}
+.video-left-ul li.active{
+  color: #ef4868;
+  border-bottom: 2px solid #ef4868;
+}
+.video-right .input-group{
+    margin-top: 20px;
+}
+.about-me-img img{
+    width: 100%;
+}
+.about-t-2{
+    margin-top: 10px!important;
+}
+.comment-ul{
+    padding: 10px!important;
+}
+
+.comment-ul li .comment-l-img img{ width: 30px; height: 30px;}
+.comment-ul li ul{
+    padding: 10px 0!important;
+}
+.send-comment .text-comment-box .text-comment{
+    height: 70px!important;
+    font-size: 13px!important;
+    line-height: 18px!important;
+}
+.send-comment p img{
+    width: 30px;
+}
+.dialog-box{
+    width: 90%!important;
+}
+.article-sub p{
+    margin: 0 4px!important;
+    font-size: 12px!important;
+}
+
+/*menu warp */
+.navbar-toggler{
+    display: none;
+}
+.collapse:not(.show) {
+    display: block;
+}
+.navbar-nav-self{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: inherit;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    height: 50px;
+    /* line-height: 50px; */
+    text-align: center;
+}
+.navbar-nav-self li{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.navbar-nav-self li a{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+}
+.loginReg{
+    position: absolute;
+    top: 26px;
+    right: 10px;
+}
+.navbar-brand img {
+    width: 100px;
+    margin-left: 10px;
+}
+.navbar-nav-self li .iconfont{
+    display: block;
+    font-size: 24px;
+}
+
+.classify-tag div{
+    margin-right: 5px!important;
+    padding: 10px!important;
+}

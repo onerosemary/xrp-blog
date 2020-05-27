@@ -1,0 +1,160 @@
+.btn, .form-control{
+    font-size: 0.8rem;
+}
+.navbar{
+    padding: 0.6rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.17);
+    z-index: 100;
+}
+.nav-link {
+    font-size: 16px;
+    margin: 0 30px;
+}
+.f-t{
+    padding-top: 7rem;
+}
+.carousel{
+    width: 62%;
+}
+.carousel img{
+    height: 300px;
+}
+.banner-notice{
+    display: flex;
+    justify-content: space-between;
+}
+.recommend-two{
+    display: flex;
+    height: 255px;
+}
+.r-t1{
+    flex: 1;
+}
+.r-t2{
+    flex: 2;
+    margin-left: 20px;
+}
+.flex-title{
+    display: flex;
+}
+.f-t-1{
+    flex: 2;
+    margin-right: 20px;
+}
+.f-t-2{
+    flex: 1;
+}
+.classify-content{
+    display: flex;
+}
+.left-img{
+    width: 200px;
+}
+.left-img-t img{
+    width: 200px;
+    height: 85px;
+}
+.right-content{
+    margin-left: 20px;
+}
+.video-ul li { width: 250px; }
+.video-ul li img{
+    width: 100%;
+    height: 220px;
+}
+.details-video{
+    display: flex;
+}
+.video-content-box{
+    height: 500px;
+}
+.video-left{
+    flex: 3;
+    margin-right: 20px;
+    padding: 10px 0;
+}
+.video-right{
+    flex: 1;
+}
+.video-plays{
+    display: flex;
+    
+}
+.video-plays .video-content-box{
+    flex: 3;
+}
+.video-plays .video-text-list{
+    padding-left: 15px;
+    flex: 1;
+    color: #c7c7c7;
+    height: 500px;
+    overflow: auto;
+}
+.video-plays .video-text-list h3{
+    padding: 20px 0;
+    font-size: 15px;
+}
+.video-plays .video-text-list li{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* 自定义滚动条 */
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.video-text-list::-webkit-scrollbar
+{
+	width: 5px;
+	height: 5px;
+	background-color: #F5F5F5;
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+.video-text-list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/* border-radius: 8px; */
+	background-color: #333;
+}
+ 
+/*定义滑块 内阴影+圆角*/
+.video-text-list::-webkit-scrollbar-thumb
+{
+	/* border-radius: 8px; */
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+.video-left-ul { display: flex;}
+.video-left-ul li{
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 40px;  
+    padding: 0 30px;
+}
+.video-left-ul li.active{
+    color: #ef4868;
+    border-bottom: 2px solid #ef4868;
+}
+
+.video-right .input-group{
+    padding: 10px;
+}
+.about-me{
+    display: flex;
+}
+.about-me-img img{
+    width: 300px;
+}
+.about-me-info{
+    display: flex;
+}
+
+/*menu warp */
+.navbar-nav-self .iconfont{
+    display: none;
+}

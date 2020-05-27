@@ -1,0 +1,25 @@
+// 公用样式模块
+
+$red: #ef4868;
+
+.Qr-code{
+    display: flex;
+    padding: 10px;
+    .Qr-code-img{
+        margin-right: 10px;
+    }
+    h6{
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+.nuxt-link-exact-active{
+    color: $red!important;
+}
+.no-data{
+    color: #999;
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+}
