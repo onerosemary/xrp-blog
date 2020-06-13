@@ -6,7 +6,7 @@
 import axios from 'axios' //引用axios
 import cookies from 'js-cookie'
 
-const productURI = 'http://www.xiangruiping.cn'
+const productURI = 'http://www.xiangruiping.cn/api'
 const URI = process.env.NODE_ENV === 'production' ? productURI : "/api"
 
 
