@@ -11,9 +11,7 @@
                     <span v-if="detailData.type === 4">H5</span>
                     <span v-if="detailData.type === 5">Css3</span></p>
         </div>
-        <div class="article-details-content">
-            {{detailData.content}}
-        </div>
+        <div class="article-details-content" v-html="detailData.content"></div>
       </div>
       <div class="f-t-2">
           <div class="hot-title">

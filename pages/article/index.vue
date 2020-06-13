@@ -21,7 +21,7 @@
                     <span v-if="item.type === 4">分类：H5</span>
                     <span v-if="item.type === 5">分类：Css3</span>
                   </div>
-                  <p class="c6 article-text-h">{{item.content}}</p>
+                  <p class="c6 article-text-h" v-html="item.sub"></p>
                 </div>
               </div>
             </nuxt-link>

@@ -30,6 +30,10 @@ module.exports = {
       src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js'
     }]
   },
+  server: {
+    port: 3000, // 默认3000 也可以改成其它的端口号
+    host: '0.0.0.0', // 默认localhost
+  },
   plugins: [
     { src: '@/plugins/element-ui', ssr: true },
     { src: '@/assets/js/iconfont.js', ssr: false } // ssr: Boolean (默认为 true) 如果值为 false，该文件只会在客户端被打包引入
@@ -55,6 +59,7 @@ module.exports = {
   proxy: [  //proxy配置
     ['/api', {
       target:'http://localhost:4000',  //api请求路径
+      // target:'http://xiangruiping.cn',  //api请求路径
       pathRewrite: { '^/api' : '/api' }  //重定向请求路径，防止路由、api路径的冲突
     }]
   ],

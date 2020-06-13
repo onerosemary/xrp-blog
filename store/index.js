@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
 import user from './modules/user'
+import cookieparser from 'cookieparser'
+import {getInfo} from '../api/login'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -27,16 +30,21 @@ const store = () => {
      },
     },
     actions: {
-      nuxtServerInit({ commit }, { req }) {
-        console.log('req.headers---', req.headers)
+     async nuxtServerInit({ commit }, { req }) {
+        // console.log('req.headers---', req.headers.cookie)
+        console.log('nuxtServerInit')
         if(req.headers.cookie) {
-          const cookieArr = req.headers.cookie.split(';')
-          const cookie = cookieArr[0].substring(11)
-          const userInfo = JSON.parse(cookieArr[1].replace(/(^\s*)|(\s*$)/g, "").substring(9))
-          commit('setToken', cookie)
-          commit('setUserInfo', userInfo)
+          const Parse = cookieparser.parse(req.headers.cookie)
+          const token = Parse.blog_token
+          commit('setToken', token)
+
+          axios.defaults.headers.common['Authorization'] = token
+          const res = await axios.get('http://localhost:4000/api/user/current')
+          // console.log('res1', res.data)
+          commit('setUserInfo', res.data)
         }
       },
+
     },
     modules: {
       user,

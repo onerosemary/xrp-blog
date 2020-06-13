@@ -34,7 +34,7 @@
             <div class="right-content">
               <el-collapse v-model="activeName" accordion v-for="(item, index) in hotArticleData" :key="index">
                 <el-collapse-item :title="item.title" :name="index">
-                  <div><nuxt-link :to="'/article/details?id=' + item._id">{{item.content}}</nuxt-link></div>
+                  <div><nuxt-link :to="'/article/details?id=' + item._id" v-html="item.sub"></nuxt-link></div>
                 </el-collapse-item>
               </el-collapse>
             </div>
@@ -60,7 +60,7 @@
                       <span v-if="item.type === 3">分类：Koa2</span>
                       <span v-if="item.type === 4">分类：H5</span>
                       <span v-if="item.type === 5">分类：Css3</span></div>
-                  <p class="c6 article-text-h">{{item.content}}</p>
+                  <p class="c6 article-text-h">{{item.sub}}</p>
                 </div>
               </div>
             </nuxt-link>

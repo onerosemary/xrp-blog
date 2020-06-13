@@ -180,9 +180,7 @@ export default {
                     if(this.status === 1) { // 登录
                         login(this.ruleForm).then(response => {
                             console.log('response---', response)
-                            // const { token } = response
-                            // this.$store.commit('setToken', token)
-                            // window.location.reload()
+                            window.location.reload()
                         }).catch(err => {
                             console.log('err', err)
                         })
