@@ -30,10 +30,10 @@ module.exports = {
       src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js'
     }]
   },
-  server: {
-    port: 3000, // 默认3000 也可以改成其它的端口号
-    host: '0.0.0.0', // 默认localhost
-  },
+  // server: {
+  //   port: 3000, // 默认3000 也可以改成其它的端口号
+  //   host: '0.0.0.0', // 默认localhost
+  // },
   plugins: [
     { src: '@/plugins/element-ui', ssr: true },
     { src: '@/assets/js/iconfont.js', ssr: false } // ssr: Boolean (默认为 true) 如果值为 false，该文件只会在客户端被打包引入
