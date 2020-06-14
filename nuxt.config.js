@@ -1,6 +1,14 @@
+import {productURI, devURI} from './config'
 const _root = process.env.NODE_ENV !== 'production' ? '' : "/dist/"
-console.log('process.env.NODE_ENV---', process.env.NODE_ENV)
 
+console.log('process.env.NODE_ENV---', process.env.NODE_ENV)
+let target = ''
+if(process.env.NODE_ENV === 'development'){
+  target = devURI
+}else{
+  target = productURI
+}
+console.log('target---', target)
 module.exports = {
   mode: 'universal',
   router:{
@@ -58,8 +66,8 @@ module.exports = {
   },
   proxy: [  //proxy配置
     ['/api', {
-      target:'http://localhost:4000',  //api请求路径
-      // target:'http://xiangruiping.cn',  //api请求路径
+      // target:'http://localhost:4000',  //api请求路径
+      target: target,  //api请求路径
       pathRewrite: { '^/api' : '/api' }  //重定向请求路径，防止路由、api路径的冲突
     }]
   ],

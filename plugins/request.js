@@ -3,11 +3,12 @@
  * 处理请求、响应错误信息
  */
 // import { Message } from 'element-ui'  //引用饿了么UI消息组件
+import {productURI} from '../config'
 import axios from 'axios' //引用axios
 import cookies from 'js-cookie'
 
-const productURI = 'http://www.xiangruiping.cn/api'
-const URI = process.env.NODE_ENV === 'production' ? productURI : "/api"
+// const productURI = 'http://www.xiangruiping.cn/api'
+const URI = process.env.NODE_ENV === 'production' ? productURI+'/api' : "/api"
 
 
 // create an axios instance
@@ -22,7 +23,7 @@ service.interceptors.request.use(
   config => {
     // do something before request is sent
     // config.headers['-Token'] = getToken()
-    if(process.server === false) { // 客户端
+    if(process.server === false && cookies.get('blog_token')) { // 客户端
       config.headers.Authorization = cookies.get('blog_token')
     }
     return config

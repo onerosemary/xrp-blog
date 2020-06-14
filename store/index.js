@@ -5,6 +5,7 @@ import user from './modules/user'
 import cookieparser from 'cookieparser'
 import {getInfo} from '../api/login'
 import axios from 'axios'
+import {productURI, devURI} from '../config'
 
 Vue.use(Vuex)
 
@@ -33,13 +34,19 @@ const store = () => {
      async nuxtServerInit({ commit }, { req }) {
         // console.log('req.headers---', req.headers.cookie)
         console.log('nuxtServerInit')
+        let target = ''
+        if(process.env.NODE_ENV === 'development'){
+          target = devURI
+        }else {
+          target = productURI
+        }
         if(req.headers.cookie) {
           const Parse = cookieparser.parse(req.headers.cookie)
           const token = Parse.blog_token
           commit('setToken', token)
 
           axios.defaults.headers.common['Authorization'] = token
-          const res = await axios.get('http://localhost:4000/api/user/current')
+          const res = await axios.get(`${target}/api/user/current`)
           // console.log('res1', res.data)
           commit('setUserInfo', res.data)
         }
