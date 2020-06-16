@@ -11,7 +11,7 @@
             <nuxt-link :to="{path: '/article/details?id=' + item._id}">
               <h6>{{item.title}}</h6>
               <div class="article-text">
-                <p class="article-img"><img src="https://cdn.duanliang920.com/uploads/images/1537260882208.jpeg" /></p>
+                <p class="article-img"><img :src="item.cover" /></p>
                 <div class="article-content">
                   <div class="article-date">
                     发布时间：{{item.date}} 
@@ -45,6 +45,7 @@
     </section>
 </template>
 <script>
+import {productURI} from '../config'
 import { articleType, articleList } from '../../api/article'
 import { parseTime } from '../../utils/index'
 export default {
@@ -67,6 +68,7 @@ export default {
   
    articleListData.data.forEach((item) => {
      item.date = parseTime(item.date)
+     item.cover = productURI +'/uploads/'+ item.cover
    })
    const {page, size, total} = articleListData
 
@@ -153,11 +155,9 @@ export default {
         padding-top: 10px;
         display: flex;
         .article-img{
-          width: 205px;
-          height: 130px;
-
           img{
-            width: 100%;
+            width: 205px;
+            height: 130px;
           }
         }
         .article-content{

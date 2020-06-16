@@ -142,7 +142,7 @@ export default {
     const res =  await homeList()
     res.data.forEach((item) => {
       item.date = parseTime(item.date)
-      item.cover = productURI +'/uploads'+ item.cover
+      item.cover = productURI +'/uploads/'+ item.cover
     })
 
     const data = {
@@ -193,11 +193,9 @@ export default {
         padding-top: 10px;
         display: flex;
         .article-img{
-          width: 205px;
-          height: 130px;
-
           img{
-            width: 100%;
+            width: 205px;
+            height: 130px;
           }
         }
         .article-content{
