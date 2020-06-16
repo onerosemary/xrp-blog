@@ -45,7 +45,7 @@
     </section>
 </template>
 <script>
-import {productURI} from '../config'
+import {productURI} from '../../config'
 import { articleType, articleList } from '../../api/article'
 import { parseTime } from '../../utils/index'
 export default {
