@@ -52,7 +52,7 @@
             <nuxt-link :to="'/article/details?id=' + item._id">
               <h6>{{item.title}}</h6>
               <div class="article-text">
-                <p class="article-img"><img src="https://cdn.duanliang920.com/uploads/images/1537260882208.jpeg" /></p>
+                <p class="article-img"><img :src="item.cover" /></p>
                 <div class="article-content">
                   <div class="article-date">发布时间：{{item.date}} 
                       <span v-if="item.type === 1">分类：Javascript</span>
@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import {productURI} from '../config'
 import { articleType, articleList, looksList } from '../api/article'
 import { homeList } from '../api/index'
 import banner from '../components/banner'
@@ -141,6 +142,7 @@ export default {
     const res =  await homeList()
     res.data.forEach((item) => {
       item.date = parseTime(item.date)
+      item.cover = productURI +'/uploads'+ item.cover
     })
 
     const data = {
