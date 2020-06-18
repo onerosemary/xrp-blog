@@ -1,5 +1,4 @@
 import {productURI, devURI} from './config'
-// const _root = process.env.NODE_ENV !== 'production' ? '' : "/dist/"
 const _root = process.env.NODE_ENV !== 'production' ? '' : "/"
 
 console.log('process.env.NODE_ENV---', process.env.NODE_ENV)
@@ -28,8 +27,10 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'},
-      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/dist/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
-      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/dist/css/pc.css', media:'only screen and (min-width: 480px)'}
+      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
+      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'},
+      { rel:'stylesheet', href: 'https://xiangruiping.cn/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
+      { rel:'stylesheet', href: 'https://xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'}
     ],
     script: [{
       src: 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js'
