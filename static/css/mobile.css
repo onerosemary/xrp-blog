@@ -23,12 +23,11 @@
     margin-top: 20px;
 }
 
-.article-ul li .article-text .article-img{
-    width: 100px!important;
-    height: 100px!important;
-}
+
 .article-ul li .article-text .article-img img{
+    width: 80px!important;
     height: 80px!important;
+    object-fit: cover;
 }
 .article-ul li .article-text .article-content .article-date {font-size: 12px!important;}
 .article-ul li .article-text .article-content .article-date span{ display: block; margin-top: 3px}

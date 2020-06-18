@@ -27,8 +27,10 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'},
-      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
-      { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'}
+      { rel:'stylesheet', href: '/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
+      { rel:'stylesheet', href: '/css/pc.css', media:'only screen and (min-width: 480px)'}
+      // { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
+      // { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'}
     ],
     script: [{
       src: 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js'
@@ -38,7 +40,6 @@ module.exports = {
       src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js'
     }]
   },
-
   plugins: [
     { src: '@/plugins/element-ui', ssr: true },
     { src: '@/assets/js/iconfont.js', ssr: false } // ssr: Boolean (默认为 true) 如果值为 false，该文件只会在客户端被打包引入
@@ -112,3 +113,18 @@ module.exports = {
   }
 }
 
+
+
+// "config": {
+//   "nuxt": {
+//     "host": "127.0.0.1",
+//     "port": "80"
+//   }
+// }
+
+// "config": {
+//   "nuxt": {
+//     "host": "0.0.0.0",
+//     "port": "3000"
+//   }
+// }
