@@ -1,6 +1,6 @@
 <template>
     <div class="bg-light footer">
-        Designer by：向瑞平 <span class="c9">备案号：湘ICP备123号-2</span>
+        Designer by：向瑞平 <span class="c9">网站备案号：湘ICP备20012390号-1</span>
     </div>
 </template>
 <style lang="scss" scoped>
