@@ -25,7 +25,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '向瑞平个人博客，是记录博主学习和成长的一个自媒体博客，关注于web前端技术学习研究。让你快速学习如何搭建自己个人网站！' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '~static/favicon.ico' },
       { rel:'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'},
       { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/mobile.css', media:'only screen and (max-width: 480px)'}, // 路径注意需要使用(开发环境)./ , 打包后的路径 http://127.0.0.1:5500/dist/css/mobile.css
       { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'}
