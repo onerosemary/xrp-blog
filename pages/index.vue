@@ -12,7 +12,7 @@
     <div class="recommend-two">
       <div class="r-t1 bg-light">
         <div class="today-recommend">今日推荐</div>
-        <img src="https://xiangruiping.cn/uploads/1592657890984.png" width="100%"/>
+        <img src="http://xiangruiping.cn/uploads/1592661671625.png" width="100%"/>
       </div>
       <div class="r-t2 bg-light">
         <!-- 分类 -->
@@ -24,11 +24,11 @@
             <div class="left-img">
               <div class="left-img-t">
                 <!-- <h4>织梦dede常用的调用标签（个人总结）</h4> -->
-                <a href="#"><img src="https://xiangruiping.cn/uploads/1592657485049.png" /></a>
+                <a href="#"><img src="http://xiangruiping.cn/uploads/1592661670718.png" /></a>
               </div>
               <div class="left-img-t">
                 <!-- <h4>织梦dede常用的调用标签（个人总结）</h4> -->
-                <a href="#"><img src="https://xiangruiping.cn/uploads/1592657531472.png" /></a>
+                <a href="#"><img src="http://xiangruiping.cn/uploads/1592661670962.png" /></a>
               </div>
             </div>
             <div class="right-content">
