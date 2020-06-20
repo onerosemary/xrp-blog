@@ -33,6 +33,10 @@ module.exports = {
       // { rel:'stylesheet', href: 'https://www.xiangruiping.cn/css/pc.css', media:'only screen and (min-width: 480px)'}
     ],
     script: [{
+      src: 'http://connect.qq.com/qc_jssdk.js',
+      'data-appid':"101882073",
+      'data-redirecturi':"https://www.xiangruiping.cn/comments"
+    },{
       src: 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js'
     },{
       src: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'

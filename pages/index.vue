@@ -2,9 +2,9 @@
   <section class="container f-t">
     <div class="banner-notice">
       <banner/>
-      <div class="notice">
+      <!-- <div class="notice">
         <img src="~static/img/index1.jpg"  width="100%"/>
-      </div>
+      </div> -->
     </div>
     <div class="hot-title">
       热门推荐
@@ -12,7 +12,7 @@
     <div class="recommend-two">
       <div class="r-t1 bg-light">
         <div class="today-recommend">今日推荐</div>
-        <img src="https://cdn.duanliang920.com/uploads/images/2019-12-29/1577617172.jpeg" width="100%"/>
+        <img src="https://xiangruiping.cn/uploads/1592657890984.png" width="100%"/>
       </div>
       <div class="r-t2 bg-light">
         <!-- 分类 -->
@@ -23,12 +23,12 @@
           <div class="classify-content">
             <div class="left-img">
               <div class="left-img-t">
-                <h4>织梦dede常用的调用标签（个人总结）</h4>
-                <a href="#"><img src="https://cdn.duanliang920.com/uploads/allimg/140924/1-1409241QK3V2.jpg?x-oss-process=image/auto-orient,1/interlace,1/resize,m_lfit,w_200,limit_0/quality,q_90" /></a>
+                <!-- <h4>织梦dede常用的调用标签（个人总结）</h4> -->
+                <a href="#"><img src="https://xiangruiping.cn/uploads/1592657485049.png" /></a>
               </div>
               <div class="left-img-t">
-                <h4>织梦dede常用的调用标签（个人总结）</h4>
-                <a href="#"><img src="https://cdn.duanliang920.com/uploads/allimg/140924/1-1409241QK3V2.jpg?x-oss-process=image/auto-orient,1/interlace,1/resize,m_lfit,w_200,limit_0/quality,q_90" /></a>
+                <!-- <h4>织梦dede常用的调用标签（个人总结）</h4> -->
+                <a href="#"><img src="https://xiangruiping.cn/uploads/1592657531472.png" /></a>
               </div>
             </div>
             <div class="right-content">
@@ -78,7 +78,7 @@
         <div class="bg-light mb-4">
           <!-- 微信群 -->
           <div class="Qr-code">
-            <p class="Qr-code-img"><img src="https://static.zhihu.com/heifetz/assets/sidebar-download-qrcode.7caef4dd.png" width="50"/></p>
+            <p class="Qr-code-img"><img src="https://xiangruiping.cn/uploads/1592658365859.jpg" width="50"/></p>
             <div class="Qr-code-text">
               <h6>加前端技术微信群</h6>
               <p>技术成就梦想， 加群交流技术</p>
@@ -196,6 +196,7 @@ export default {
           img{
             width: 205px;
             height: 130px;
+            object-fit: contain;
           }
         }
         .article-content{

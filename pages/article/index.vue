@@ -158,6 +158,7 @@ export default {
           img{
             width: 205px;
             height: 130px;
+            object-fit: contain;
           }
         }
         .article-content{

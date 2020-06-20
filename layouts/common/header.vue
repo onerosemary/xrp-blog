@@ -59,7 +59,7 @@
                             </el-input>
                         </el-form-item>
                         <el-form-item :label="status === 2 ? '新密码' : '密码'" prop="password">
-                            <el-input v-model="ruleForm.password" :placeholder="status === 2 ? '请输入新密码' : '请输入密码'">
+                            <el-input type="password" v-model="ruleForm.password" :placeholder="status === 2 ? '请输入新密码' : '请输入密码'">
                                 <i slot="prefix" class="el-input__icon el-icon-lock"></i>
                             </el-input>
                         </el-form-item>
@@ -80,7 +80,7 @@
                         第三方账号登录
                     </div>
                     <div class="qq-control">
-                        <span class="qq-c">
+                        <span class="qq-c" id="qqLoginBtn" @click="qqLoginClick('qq')">
                             <i class="iconfont icon-web-icon-"></i>
                         </span>
                         <span class="weibo-c">
@@ -97,6 +97,25 @@ import { register, emailVerify, login, getInfo, findPassword } from '../../api/l
 import cookies from 'js-cookie'
 export default {
     data() {
+        const checkEamil = (rule, value, callback) => {
+            const regEmail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
+            if (!value) {
+            return callback(new Error('邮箱不能为空'))
+            }else if (!regEmail.test(value)) {
+                callback(new Error('邮箱格式不正确'))
+            } else {
+                callback()
+            }
+        }
+        const checkPwd =  (rule, value, callback) => {
+            if (!value) {
+            return callback(new Error('密码不能为空'))
+            }else if (value.length <6 || value.length >= 30) {
+                callback(new Error('密码长度不能小于6位,并不能大于30位'))
+            } else {
+                callback()
+            }
+        }
         return {
             status: 1, // 注册/登录/忘记密码
             wait: 300, // 5分钟
@@ -112,7 +131,7 @@ export default {
             // dialogFormVisible: false,
             rules: {
                 email: [
-                    { required: true, message: '请输入邮箱', trigger: 'blur' }
+                    { validator:checkEamil, trigger: 'blur' }
                 ],
                 code: [
                     { required: true, message: '请输入邮箱验证码', trigger: 'blur' }
@@ -121,12 +140,24 @@ export default {
                     { required: true, message: '请输入用户名', trigger: 'blur' }
                 ],
                 password: [
-                    { required: true, message: '请输入密码', trigger: 'blur' }
+                    { validator:checkPwd, trigger: 'blur' }
                 ]
             }
         }
     },
+    mounted(){
+        console.log('QC---', QC)
+    },
     methods: {
+        // QQ 第三方登录
+        qqLoginClick (value) {
+            // 直接弹出授权页面，授权过后跳转到回调页面进行登录处理
+            QC.Login.showPopup({
+                appId: '101882073',
+                redirectURI: 'https://www.xiangruiping.cn/'
+            })
+        },
+
         // 邮箱校验
         sendCode() {
             // 校验

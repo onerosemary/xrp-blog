@@ -40,15 +40,18 @@ const store = () => {
         }else {
           target = productURI
         }
-        if(req.headers.cookie) {
+        if(req.headers && req.headers.cookie) {
           const Parse = cookieparser.parse(req.headers.cookie)
           const token = Parse.blog_token
-          commit('setToken', token)
+          if(token) {
+            commit('setToken', token)
 
-          axios.defaults.headers.common['Authorization'] = token
-          const res = await axios.get(`${target}/api/user/current`)
-          // console.log('res1', res.data)
-          commit('setUserInfo', res.data)
+            axios.defaults.headers.common['Authorization'] = token
+            const res = await axios.get(`${target}/api/user/current`)
+            // console.log('res1', res.data)
+            commit('setUserInfo', res.data)
+          }
+          
         }
       },
 

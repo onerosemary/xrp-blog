@@ -16,11 +16,12 @@
 .f-t{
     padding-top: 7rem;
 }
-.carousel{
+/* .carousel{
     width: 62%;
-}
+} */
 .carousel img{
     height: 300px;
+    object-fit: cover;
 }
 .banner-notice{
     display: flex;

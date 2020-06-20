@@ -24,7 +24,7 @@
           <div class="bg-light mb-4">
             <!-- 微信群 -->
             <div class="Qr-code">
-              <p class="Qr-code-img"><img src="https://static.zhihu.com/heifetz/assets/sidebar-download-qrcode.7caef4dd.png" width="50"/></p>
+              <p class="Qr-code-img"><img src="https://xiangruiping.cn/uploads/1592658365859.jpg" width="50"/></p>
               <div class="Qr-code-text">
                 <h6>加前端技术微信群</h6>
                 <p>技术成就梦想， 加群交流技术</p>
@@ -128,6 +128,7 @@ export default {
 
           img{
             width: 100%;
+            object-fit: contain;
           }
         }
         .article-content{

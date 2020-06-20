@@ -2,7 +2,7 @@
  * 封装Axios
  * 处理请求、响应错误信息
  */
-// import { Message } from 'element-ui'  //引用饿了么UI消息组件
+import { Message } from 'element-ui'  //引用饿了么UI消息组件
 import {productURI} from '../config'
 import axios from 'axios' //引用axios
 import cookies from 'js-cookie'
@@ -37,38 +37,21 @@ service.interceptors.request.use(
 
 // response interceptor
 service.interceptors.response.use(
-  /**
-   * If you want to get http information such as headers or status
-   * Please return  response => response
-   */
-
-  /**
-   * Determine the request status by custom code
-   * Here is just an example
-   * You can also judge the status by HTTP Status Code
-   */
   response => {
     const res = response.data //res is my own data
     if (res.code === 0) {
-    // do somethings when response success
-    //   Message({
-    //     message: res.message || '操作成功',
-    //     type: 'success',
-    //     duration: 1 * 1000
-    //   })
       return res
-    } else {
-      // if the custom code is not 200000, it is judged as an error.
-      // Message({
-      //   message: res.msg || 'Error',
-      //   type: 'error',
-      //   duration: 2 * 1000
-      // })
-      console.log('err', res.msg)
-      return Promise.reject(new Error(res.msg || 'Error'))
+    }else {
+      Message({
+        message: res.msg || Object.values(res.errors)[0] || 'Error',
+        type: 'error',
+        duration: 1000
+      })
+      return Promise.reject(new Error(res.msg || Object.values(res.errors)[0] || 'Error'))
     }
   },
   error => {
+
     console.log('err' + error) // for debug
     // Message({
     //   message: error.message,

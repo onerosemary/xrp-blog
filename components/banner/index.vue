@@ -6,18 +6,18 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="https://bpic.588ku.com/art_water_pic/19/11/29/fc6f95dc16bfa6d82ed3ca23178c2f3f.jpg"  class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="https://xiangruiping.cn/uploads/1592656983923.jpg"  class="d-block w-100" alt="...">
+            <!-- <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+            </div> -->
             </div>
             <div class="carousel-item">
-            <img src="https://bpic.588ku.com/element_origin_min_pic/20/03/11/b21f7ffe1bc9facd7e55a3c47725bd8d.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="https://xiangruiping.cn/uploads/1592656911394.png" class="d-block w-100" alt="...">
+            <!-- <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+            </div> -->
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">

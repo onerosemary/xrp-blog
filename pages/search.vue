@@ -147,11 +147,10 @@ export default {
         padding-top: 10px;
         display: flex;
         .article-img{
-          width: 205px;
-          height: 130px;
-
           img{
-            width: 100%;
+            width: 205px;
+            height: 130px;
+            object-fit: contain;
           }
         }
         .article-content{
