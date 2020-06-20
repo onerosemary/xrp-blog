@@ -106,30 +106,37 @@ export default {
         size: ctx.route.query.size
       }
       const postData =  await postList(params)
-      
-      postData.data.forEach((item) => {
-        // 日期格式化
-        item.date = parseTime(item.date)
-        if(item.comments.length > 0){
-          item.comments.forEach((citem) => {
-            citem.date = parseTime(citem.date)
-          })
-        }
-      })
-      const {page, size, total} = postData
 
       // 热文排行榜
       const hotArticlesRanking = await looksList()
-      // console.log('hotArticlesRanking', hotArticlesRanking.data)
-      
-      return { 
-        listData: postData.data,
-        current: page,
-        pageSize: size,
-        totals: total,
-        hotArticlesRanking: hotArticlesRanking.data
+
+      if(postData.data){
+        postData.data.forEach((item) => {
+          // 日期格式化
+          item.date = parseTime(item.date)
+          if(item.comments.length > 0){
+            item.comments.forEach((citem) => {
+              citem.date = parseTime(citem.date)
+            })
+          }
+        })
+        const {page, size, total} = postData
+
+        return { 
+          listData: postData.data,
+          current: page,
+          pageSize: size,
+          totals: total,
+          hotArticlesRanking: hotArticlesRanking.data
         }
-      },
+      }else{
+        return { 
+          hotArticlesRanking: hotArticlesRanking.data
+        }
+      }
+      
+      
+    },
       methods: {
         //  显示二级回复文本域
         replay(index) {
